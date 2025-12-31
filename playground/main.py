@@ -19,9 +19,6 @@ from starlette import status
 #
 # # This will create the tables in PostgreSQL if they don't exist
 # Base.metadata.create_all(bind=engine)
-# print("Tables created successfully")
-#
-# DATABASE_URL = os.getenv("DATABASE_URL")
 
 app = FastAPI()
 
