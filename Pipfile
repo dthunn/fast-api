@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 fastapi = {extras = ["standard"], version = "*"}
+pydantic = "*"
+psycopg2-binary = "*"
+sqlalchemy = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
