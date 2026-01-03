@@ -8,7 +8,7 @@ import pytest
 from todo.models import Todos, Users
 from todo.routes.auth import bcrypt_context
 
-SQLALCHEMY_DATABASE_URL = "sqlite:///./testdb.db"
+SQLALCHEMY_DATABASE_URL = "sqlite+pysqlite:///:memory:"
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL,
@@ -60,7 +60,6 @@ def test_user():
         last_name="Roby",
         hashed_password=bcrypt_context.hash("testpassword"),
         role="admin",
-        phone_number="(111)-111-1111"
     )
     db = TestingSessionLocal()
     db.add(user)
